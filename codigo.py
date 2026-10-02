@@ -59,7 +59,7 @@ faturamento_formatado = f"R$ {faturamento:,.2f}".replace(",", "X").replace(".", 
 st.metric("Faturamento total", faturamento_formatado)
 
     #Grafico de barra (venda por vendedor)
-grafico1 = px.bar(tabela_vendas, x="vendedor", y="valor", color="produto", text_auto=True)
+grafico1 = px.bar(tabela_vendas, x="vendedor", y="valor", color="produto")
 st.plotly_chart(grafico1)
 
     #Grafico de pizza (venda por produto)
