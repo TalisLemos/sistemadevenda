@@ -54,8 +54,9 @@ st.dataframe(tabela_vendas)
 st.write("## Dashoboard")
 
     #Card com uma metrica (faturamento total)
-faturamento = round(tabela_vendas["valor"].sum(),2)
-st.metric("Faturamento total", f"R$ {faturamento}")
+faturamento = tabela_vendas["valor"].sum()
+faturamento_formatado = f"R$ {faturamento:,.2f}".replace(",", "X").replace(".", ",").replace("X", ".")
+st.metric("Faturamento total", faturamento_formatado)
 
     #Grafico de barra (venda por vendedor)
 grafico1 = px.bar(tabela_vendas, x="vendedor", y="valor",color="produto")
