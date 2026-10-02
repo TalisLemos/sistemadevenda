@@ -28,7 +28,7 @@ tabela_vendas = pd.read_csv("vendas.csv")
 st.write("# Sistema de Vendas")
 
 #Sesao de vendas cadastradas
-st.sidebar.write("## Cadastra vendas")
+st.sidebar.write("## Cadastrar vendas")
 data = st.sidebar.date_input("data")
 vendedor = st.sidebar.selectbox("Vendedor", ["Ana", "Bruno", "Carlos"])
 produto = st.sidebar.selectbox("Produto", ["Notebook", "Celular", "Fone"])
