@@ -51,7 +51,7 @@ st.dataframe(tabela_vendas)
 
 
 #Sessao dashboard
-st.write("## Dashoboard")
+st.write("## Dashboard")
 
     #Card com uma metrica (faturamento total)
 faturamento = tabela_vendas["valor"].sum()
